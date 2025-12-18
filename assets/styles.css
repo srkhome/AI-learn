@@ -225,3 +225,32 @@ hr.sep{border:0; border-top:1px solid var(--line); margin:14px 0}
 @media (max-width: 768px){
   .calendar-embed iframe{ height: 720px; }
 }
+
+
+/* LINE add friend button */
+.line-add-card{
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 16px;
+  background: #f7faff;
+  border: 1px solid rgba(0,0,0,.06);
+  text-align: center;
+}
+.line-add-card h3{
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+.line-add-card p{
+  margin: 0 0 14px;
+  color: #555;
+}
+.line-add-btn{
+  display:inline-block;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: #06c755;
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+}
+.line-add-btn:hover{ filter: brightness(.95); }
