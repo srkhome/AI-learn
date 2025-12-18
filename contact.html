@@ -1,150 +1,138 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>聯絡｜宜仁居家 AI 學習</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>聯絡與預約｜宜仁居家 AI 學習</title>
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
 
-    <header class="navbar">
-      <div class="container nav-inner">
-        <a class="brand" href="index.html"><img src="assets/img/logo_20251218.png" alt="宜仁居家 AI 學習 Logo"></a>
-        <nav class="nav-links">
-          <a href="index.html" class="">首頁</a>
-          <a href="process.html" class="">流程</a>
-          <a href="tools/index.html" class="">工具教學</a>
-          <a href="cases.html" class="">成果案例</a>
-          <a href="faq.html" class="">FAQ</a>
-          <a href="contact.html">預約</a>
-        <a href="contact.html" class="primary" aria-current="page">聯絡</a>
-        </nav>
-        <button class="menu-btn" data-menu-btn>選單</button>
-      </div>
-      <div class="container mobile-panel" data-mobile-panel>
-        <a href="index.html">首頁</a>
-        <a href="process.html">流程</a>
-        <a href="tools/index.html">工具教學</a>
-        <a href="cases.html">成果案例</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">預約</a>
-        <a href="contact.html">聯絡</a>
-      </div>
-    </header>
-<section id="booking" class="section calendar-section">
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="assets/img/logo_20251218.png" alt="宜仁居家 Logo" />
+      <span>宜仁居家 AI 學習</span>
+    </a>
+    <nav class="navlinks">
+      <a href="index.html">首頁</a>
+      <a href="flow.html">流程</a>
+      <a href="tools.html">工具教學</a>
+      <a href="cases.html">成果案例</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html#calendar">預約</a>
+      <a class="btn small" href="contact.html#contact">聯絡</a>
+    </nav>
+    <button class="burger" aria-label="menu" onclick="document.body.classList.toggle('nav-open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="section" id="contact">
   <div class="container">
-    <h2>📅 線上預約（Google 行事曆）</h2>
-    <p class="calendar-desc">選好時間後，加入 LINE：<strong>ksr3134</strong>，我們會協助你快速確認與安排。</p>
-    <div class="calendar-embed">
-      <iframe class="calendar-embed" src="https://calendar.google.com/calendar/embed?src=shengrenke421%40gmail.com&ctz=Asia%2FTaipei" frameborder="0" scrolling="no"></iframe>
-    </div>
-  
-    <div class="line-add-card">
-      <h3>加入 LINE 直接聯絡</h3>
-      <p>不用掃 QR Code，點一下就能加好友。選好時間後，我們會在 LINE 協助你快速確認與安排。</p>
-      <a class="line-add-btn" href="https://line.me/ti/p/40LmfznrLG" target="_blank" rel="noopener">➕ 直接加 LINE 好友</a>
-    </div>
-</div>
-</section>
+    <div class="kicker">聯絡與預約</div>
+    <h1 class="h1">聯絡與預約</h1>
+    <p class="lead">想快速了解「10–15 分鐘完成 AI 行銷影片」流程或合作方式，請先在行事曆挑選時間，再一鍵加入 LINE，我們會協助你快速確認與安排。</p>
 
+    <!-- ✅ 只留一個聯絡與預約區塊：行事曆在上、LINE 在下 -->
+    <section class="section" style="padding-top:16px;">
+      <div class="card" style="padding:20px;">
+        <div class="kicker">預約時段</div>
+        <h2 style="margin:8px 0 8px;">線上預約（Google 行事曆）</h2>
+        <p style="margin:0 0 14px;color:var(--muted)">選好時間後，直接加 LINE：<b>ksr3134</b>，我們會協助你快速確認與安排。</p>
 
-    
-
-
-<main class="section">
-  <div class="container">
-
-    <h1>聯絡與預約</h1>
-    <p class="sub">想了解「10–15 分鐘完成 AI 行銷影片」流程或合作方式，可直接在行事曆挑選時段，或用 LINE / Email 聯絡我。</p>
-
-    <!-- Booking first (top) -->
-    <div class="card" style="padding:16px; margin-bottom:16px" id="booking">
-      <div class="badge" style="margin-bottom:10px">預約時段</div>
-      <h2 style="margin:0 0 8px">線上預約（Google 行事曆）</h2>
-      <p class="muted" style="margin:0 0 12px">選好時間後，直接加 LINE：<b>ksr3134</b> 我們會協助你快速確認與安排。</p>
-      <div class="calendar-wrap">
-        <iframe class="calendar-embed" src="https://calendar.google.com/calendar/embed?src=shengrenke421%40gmail.com&ctz=Asia%2FTaipei" frameborder="0" scrolling="no"></iframe>
-      </div>
-      <p class="muted" style="margin:10px 0 0">若你只想顯示「可預約」忙碌，可在 Google 行事曆權限中調整顯示方式。</p>
-    </div>
-
-    <!-- Contact cards -->
-    <div class="hero-grid" style="align-items:stretch">
-      <div class="card" style="padding:16px">
-        <h2 style="margin:0 0 10px">聯絡方式</h2>
-
-        <div style="display:flex; flex-direction:column; gap:10px">
-          <div>
-            <div class="muted" style="font-weight:800; margin-bottom:4px">Email</div>
-            <div style="font-size:18px; font-weight:900">ueue31@gmail.com</div>
-          </div>
-
-          <div>
-            <div class="muted" style="font-weight:800; margin-bottom:4px">LINE ID</div>
-            <div style="font-size:18px; font-weight:900">ksr3134</div>
-          </div>
-
-          <a class="btn" href="https://line.me/ti/p/40LmfznrLG" target="_blank" rel="noopener">LINE 直接加好友</a>
-          <a class="btn ghost" href="mailto:ueue31@gmail.com">Email 我</a>
-        </div>
-      </div>
-
-      <div class="card" style="padding:16px">
-        <h2 style="margin:0 0 10px">快速指引</h2>
-        <p class="muted" style="margin:0 0 12px">你也可以先看流程，再回來預約。想學工具操作，直接進工具教學頁。</p>
-        <div class="cta-row">
-          <a class="btn" href="tools.html">前往工具教學</a>
-          <a class="btn ghost" href="flow.html">前往流程總覽</a>
-          <a class="btn ghost" href="cases.html">看成果案例</a>
+        <div class="calendar-embed" style="margin-top:8px;">
+          <iframe
+            title="Google Calendar"
+            src="https://calendar.google.com/calendar/embed?src=shengrenke421%40gmail.com&ctz=Asia%2FTaipei"
+            style="border:0"
+            frameborder="0"
+            scrolling="no"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
         </div>
 
-        <hr style="border:none; border-top:1px solid rgba(226,232,240,.9); margin:16px 0">
-
-        <div class="badge" style="margin-bottom:10px">全台社群</div>
-        <p class="muted" style="margin:0 0 12px">我們在全台建立 AI 商務群組（六都），方便交流與合作。</p>
-        <img class="img-fluid" src="assets/img/taiwan-ai-business-groups.jpg" alt="全台 AI 商務群組截圖">
+        <div class="line-add-card" style="margin-top:16px;">
+          <div>
+            <div style="font-weight:800;margin-bottom:4px;">加入 LINE 直接聯絡</div>
+            <div class="muted">不用掃 QR Code，點一下就能加好友。選好時間後，我們會在 LINE 協助你快速確認與安排。</div>
+          </div>
+          <a class="line-add-btn" href="https://line.me/ti/p/40LmfznrLG" target="_blank" rel="noopener">＋ 直接加 LINE 好友</a>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="section">
+      <div class="split">
+        <div>
+          <div class="card" style="padding:20px;">
+            <div class="kicker">聯絡方式</div>
+            <div style="display:grid;gap:12px;">
+              <div>
+                <div style="font-weight:800;">Email</div>
+                <div class="muted">ueue31@gmail.com</div>
+              </div>
+              <div>
+                <div style="font-weight:800;">LINE ID</div>
+                <div class="muted">ksr3134</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="padding:20px;margin-top:16px;">
+            <div class="kicker">全台社群</div>
+            <p class="muted" style="margin-top:8px;">我們在全台建立 AI 商務群組（六都），方便交流與合作。</p>
+            <figure class="figure" style="margin-top:12px;">
+              <img src="assets/img/groups_taiwan.jpg" alt="全台 AI 商務群組" />
+            </figure>
+          </div>
+        </div>
+
+        <div>
+          <div class="card" style="padding:20px;">
+            <div class="kicker">行動</div>
+            <p class="muted" style="margin-top:8px;">如果你想先看流程，再學工具，也可以從這裡開始。</p>
+            <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;">
+              <a class="btn" href="flow.html">看流程總覽</a>
+              <a class="btn ghost" href="tools.html">開始學工具</a>
+            </div>
+          </div>
+
+          <div class="card" style="padding:20px;margin-top:16px;">
+            <div class="kicker">小提醒</div>
+            <p class="muted" style="margin-top:8px;">若你想顯示「可預約忙碌」，可在 Google 行事曆權限中調整顯示方式。</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </div>
 </main>
 
-
-
-    
-
-
 <footer class="footer">
-      <div class="container footer-grid">
-        <div class="card contact-box">
-          <div class="kicker">宜仁居家 AI 學習</div>
-          <div style="font-weight:900; margin-top:6px;">10–15 分鐘完成 AI 行銷影片的實戰流程</div>
-          <div class="muted small" style="margin-top:6px;">把流程做對，工具就會變簡單。</div>
-          <hr class="sep">
-          <div class="line"><span class="icon">📧</span><div><div style="font-weight:800;">Email</div><div class="muted">ueue31@gmail.com</div></div></div>
-          <div class="line"><span class="icon">💬</span><div><div style="font-weight:800;">LINE ID</div><div class="muted">ksr3134</div></div></div>
-        </div>
-        <div>
-          <div class="kicker">快速連結</div>
-          <div style="margin-top:10px; display:grid; gap:8px;">
-            <a href="tools/index.html">工具教學</a>
-            <a href="process.html">流程總覽</a>
-            <a href="cases.html">成果案例</a>
-            <a href="faq.html">常見問題</a>
-          </div>
-        </div>
-        <div>
-          <div class="kicker">行動</div>
-          <div style="margin-top:10px; display:grid; gap:8px;">
-            <a class="btn primary" href="tools/index.html">開始學工具</a>
-            <a class="btn" href="contact.html">立即聯絡</a>
-          </div>
-        </div>
+  <div class="container footer-inner">
+    <div>
+      <div class="brand" style="gap:10px;">
+        <img class="brand-logo" src="assets/img/logo_20251218.png" alt="宜仁居家 Logo" />
+        <strong>宜仁居家 AI 學習</strong>
       </div>
-      <div class="container muted small" style="margin-top:12px;">© 宜仁居家 AI 學習</div>
-    </footer>
-    
-<script src="assets/main.js"></script>
+      <p class="muted" style="margin-top:10px;">把 AI 變成你的「行銷組裝廠」：先有流程，再有工具，最後能成交。</p>
+    </div>
+    <div class="footer-links">
+      <a href="flow.html">流程</a>
+      <a href="tools.html">工具教學</a>
+      <a href="cases.html">成果案例</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html#contact">聯絡</a>
+    </div>
+  </div>
+  <div class="container" style="padding-top:12px;padding-bottom:24px;">
+    <div class="muted" style="font-size:13px;">© <span id="year"></span> 宜仁居家 AI 學習｜Email: ueue31@gmail.com｜LINE: ksr3134</div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
 </body>
 </html>
