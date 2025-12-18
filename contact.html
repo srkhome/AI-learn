@@ -37,7 +37,7 @@
     <h2>📅 線上預約（Google 行事曆）</h2>
     <p class="calendar-desc">選好時間後，加入 LINE：<strong>ksr3134</strong>，我們會協助你快速確認與安排。</p>
     <div class="calendar-embed">
-      <iframe src="https://calendar.google.com/calendar/embed?src=shengrenke421%40gmail.com&ctz=Asia%2FTaipei" loading="lazy" referrerpolicy="no-referrer-when-downgrade" scrolling="no"></iframe>
+      <iframe class="calendar-embed" src="https://calendar.google.com/calendar/embed?src=shengrenke421%40gmail.com&ctz=Asia%2FTaipei" frameborder="0" scrolling="no"></iframe>
     </div>
   
     <div class="line-add-card">
@@ -51,68 +51,65 @@
 
     
 
+
 <main class="section">
   <div class="container">
-    <div class="kicker">聯絡</div>
-    <h1 style="margin:6px 0 10px;">想導入 AI 行銷影片？歡迎直接聯絡</h1>
-    <p class="muted">最快方式：加 LINE 討論你的需求與目標，我們會用「流程」幫你把影片做出來。</p>
 
-    <div class="split" style="margin-top:12px;">
-      <div class="card" style="padding:16px;">
-        <h2 style="margin:0 0 8px;">聯絡方式</h2>
-        <div class="line"><span class="icon">📧</span><div><div style="font-weight:900;">Email</div><div class="muted">ueue31@gmail.com</div></div>
+    <h1>聯絡與預約</h1>
+    <p class="sub">想了解「10–15 分鐘完成 AI 行銷影片」流程或合作方式，可直接在行事曆挑選時段，或用 LINE / Email 聯絡我。</p>
 
-        <div id="calendar" class="card" style="padding:16px; margin-top:12px;">
-          <div class="kicker">預約時段</div>
-          <h2 style="margin:6px 0 10px;">線上預約（Google 行事曆）</h2>
-          <div class="muted" style="margin:0 0 10px;">選好時間後，直接加 LINE：ksr3134，我們會協助你快速確認與安排。</div>
-          <div class="video-wrap" style="padding-top:62%; background:#fff;">
-            </div>
+    <!-- Booking first (top) -->
+    <div class="card" style="padding:16px; margin-bottom:16px" id="booking">
+      <div class="badge" style="margin-bottom:10px">預約時段</div>
+      <h2 style="margin:0 0 8px">線上預約（Google 行事曆）</h2>
+      <p class="muted" style="margin:0 0 12px">選好時間後，直接加 LINE：<b>ksr3134</b> 我們會協助你快速確認與安排。</p>
+      <div class="calendar-wrap">
+        <iframe class="calendar-embed" src="https://calendar.google.com/calendar/embed?src=shengrenke421%40gmail.com&ctz=Asia%2FTaipei" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <p class="muted" style="margin:10px 0 0">若你只想顯示「可預約」忙碌，可在 Google 行事曆權限中調整顯示方式。</p>
+    </div>
+
+    <!-- Contact cards -->
+    <div class="hero-grid" style="align-items:stretch">
+      <div class="card" style="padding:16px">
+        <h2 style="margin:0 0 10px">聯絡方式</h2>
+
+        <div style="display:flex; flex-direction:column; gap:10px">
+          <div>
+            <div class="muted" style="font-weight:800; margin-bottom:4px">Email</div>
+            <div style="font-size:18px; font-weight:900">ueue31@gmail.com</div>
           </div>
-          <p class="caption">若你只想顯示「可預約/忙碌」，可在 Google 行事曆權限中調整顯示方式。</p>
-        </div>
-</div>
-        <div class="line"><span class="icon">💬</span><div><div style="font-weight:900;">LINE ID</div><div class="muted">ksr3134</div></div></div>
-        <hr class="sep">
-        <div class="kicker">全台社群</div>
-        <div class="muted" style="margin-top:6px;">我們在全台建立 AI 商務群組（六都），方便交流與合作。</div>
-        <div class="card figure" style="padding:12px; border-radius:14px; margin-top:10px;">
-          <img src="assets/img/taiwan-ai-business-groups.jpg" alt="全台 AI 商務群組">
-          <p class="caption">想加入社群，直接加 LINE 聯絡最方便。</p>
-        </div>
 
-        <hr class="sep">
-        <div class="kicker">你可以這樣問</div>
-        <ul class="steps">
-          <li>我想做哪一種行銷影片（產品/課程/活動/房地產）</li>
-          <li>希望的影片長度（15–30 秒 / 30–60 秒）</li>
-          <li>目前有哪些素材（照片/影片/文字/活動方案）</li>
-        </ul>
+          <div>
+            <div class="muted" style="font-weight:800; margin-bottom:4px">LINE ID</div>
+            <div style="font-size:18px; font-weight:900">ksr3134</div>
+          </div>
+
+          <a class="btn" href="https://line.me/ti/p/40LmfznrLG" target="_blank" rel="noopener">LINE 直接加好友</a>
+          <a class="btn ghost" href="mailto:ueue31@gmail.com">Email 我</a>
+        </div>
       </div>
 
-      <div class="card" style="padding:16px;">
-        <div class="kicker">快速開始</div>
-        <h2 style="margin:6px 0 8px;">先看工具教學，再決定要做哪一種內容</h2>
-        <p class="muted">你也可以直接到工具教學頁，用錨點跳到想學的段落。</p>
+      <div class="card" style="padding:16px">
+        <h2 style="margin:0 0 10px">快速指引</h2>
+        <p class="muted" style="margin:0 0 12px">你也可以先看流程，再回來預約。想學工具操作，直接進工具教學頁。</p>
         <div class="cta-row">
-          <a class="btn primary" href="tools/index.html">前往工具教學</a>
-          <a class="btn" href="process.html">前往流程總覽</a>
-        </div>
-        
-        <div class="card figure" style="padding:12px; border-radius:14px; margin-top:12px;">
-          <img src="assets/img/ai-marketing-course-3phase-vertical.jpg" alt="AI 行銷實戰課三階段流程（直式）">
-          <p class="caption">課程路線圖：從「學會工具」到「真正變現」。</p>
+          <a class="btn" href="tools.html">前往工具教學</a>
+          <a class="btn ghost" href="flow.html">前往流程總覽</a>
+          <a class="btn ghost" href="cases.html">看成果案例</a>
         </div>
 
-<div class="card" style="padding:12px; border-radius:14px; margin-top:12px;">
-          <div class="kicker">品牌</div>
-          <div style="font-weight:900;">宜仁居家 AI 學習</div>
-          <div class="muted small">10–15 分鐘完成 AI 行銷影片的實戰流程</div>
-        </div>
+        <hr style="border:none; border-top:1px solid rgba(226,232,240,.9); margin:16px 0">
+
+        <div class="badge" style="margin-bottom:10px">全台社群</div>
+        <p class="muted" style="margin:0 0 12px">我們在全台建立 AI 商務群組（六都），方便交流與合作。</p>
+        <img class="img-fluid" src="assets/img/taiwan-ai-business-groups.jpg" alt="全台 AI 商務群組截圖">
       </div>
     </div>
+
   </div>
 </main>
+
 
 
     
