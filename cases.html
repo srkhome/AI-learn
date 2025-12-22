@@ -48,41 +48,175 @@
 
     <div id="testimonials" class="card" style="padding:16px; margin-top:12px;">
       <div class="kicker">見證專區</div>
-      <h2 style="margin:6px 0 10px;">學員 / 客戶真實見證（依產業）</h2>
-      <p class="muted" style="margin:0 0 12px;">先看同產業，再看全省學員與社群規模，最快建立信任。</p>
+	      <h2 style="margin:6px 0 10px;">學員 / 客戶真實見證（正式展示版）</h2>
+	      <p class="muted" style="margin:0 0 12px;">可依產業快速篩選，直接觀看影片。你之後只要新增連結，就能持續擴充。</p>
 
-      <div class="grid3">
-        <div class="card feature" style="border-radius:14px;">
-          <div class="kicker">房地產</div>
-          <h3 style="margin:6px 0 6px;">房地產實戰見證</h3>
-          <div class="video-wrap" style="margin-top:10px;">
-            <iframe src="https://www.youtube.com/embed/kihBkqBzzOQ" title="房地產見證 Shorts" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="muted small" style="margin-top:8px;">從 AI 文案到影片產出，協助溝通與成交。</div>
-        </div>
+	      <!-- Featured row -->
+	      <div class="grid3" style="margin-bottom:12px;">
+	        <div class="card feature" style="border-radius:14px;">
+	          <div class="kicker">房地產</div>
+	          <h3 style="margin:6px 0 6px;">房地產實戰見證</h3>
+	          <div class="video-wrap" style="margin-top:10px;">
+	            <iframe loading="lazy" src="https://www.youtube.com/embed/kihBkqBzzOQ" title="房地產見證 Shorts" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	          </div>
+	          <div class="muted small" style="margin-top:8px;">從 AI 文案到影片產出，協助溝通與成交。</div>
+	        </div>
+	        <div class="card feature" style="border-radius:14px;">
+	          <div class="kicker">全省學員</div>
+	          <h3 style="margin:6px 0 6px;">全省學員真實見證</h3>
+	          <div class="video-wrap" style="margin-top:10px;">
+	            <iframe loading="lazy" src="https://www.youtube.com/embed/7OQFWnnUqkE" title="全省學員見證 Shorts" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	          </div>
+	          <div class="muted small" style="margin-top:8px;">不同縣市、不同產業都能照流程做出成果。</div>
+	        </div>
+	        <div class="card feature" style="border-radius:14px;">
+	          <div class="kicker">全台社群</div>
+	          <h3 style="margin:6px 0 6px;">全台 AI 商務群組（六都）</h3>
+	          <img src="assets/img/taiwan-ai-business-groups.jpg" alt="全台 AI 商務群組" style="width:100%; border-radius:12px; border:1px solid var(--line);">
+	          <div class="muted small" style="margin-top:8px;">支持商務交流、每日 PO 商務訊息，自由鏈接沒框架。</div>
+	        </div>
+	      </div>
 
-        <div class="card feature" style="border-radius:14px;">
-          <div class="kicker">全省學員</div>
-          <h3 style="margin:6px 0 6px;">全省學員真實見證</h3>
-          <div class="video-wrap" style="margin-top:10px;">
-            <iframe src="https://www.youtube.com/embed/7OQFWnnUqkE" title="全省學員見證 Shorts" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="muted small" style="margin-top:8px;">來自不同縣市、不同產業的學員回饋。</div>
-        </div>
+	      <!-- Filters -->
+	      <div class="tbar">
+	        <div class="tbar-left">
+	          <div class="muted small" style="font-weight:800;">依分類篩選</div>
+	          <div id="tChips" class="chips" aria-label="見證分類篩選"></div>
+	        </div>
+	        <div class="tbar-right">
+	          <label class="muted small" for="tSearch" style="font-weight:800;">快速搜尋</label>
+	          <input id="tSearch" class="tsearch" type="search" placeholder="輸入：招生 / 企業 / 長照…" autocomplete="off">
+	        </div>
+	      </div>
 
-        <div class="card feature" style="border-radius:14px;">
-          <div class="kicker">全台社群</div>
-          <h3 style="margin:6px 0 6px;">全台 AI 商務群組（六都）</h3>
-          <img src="assets/img/taiwan-ai-business-groups.jpg" alt="全台 AI 商務群組" style="width:100%; border-radius:12px; border:1px solid var(--line);">
-          <div class="muted small" style="margin-top:8px;">全省多城市社群，支持商務交流與每日 PO 商務訊息，自由鏈接沒框架。</div>
-        </div>
-      </div>
+	      <!-- Grid -->
+	      <div id="testimonialGrid" class="tgrid" style="margin-top:12px;"></div>
 
-      <div class="cta-row" style="margin-top:12px;">
-        <a class="btn primary" href="contact.html">加入社群 / 詢問</a>
-        <a class="btn" href="tools/index.html">我先學流程與工具</a>
-      </div>
+	      <div class="cta-row" style="margin-top:14px;">
+	        <a class="btn primary" href="contact.html">我要加入 / 詢問</a>
+	        <a class="btn" href="tools/index.html">我先學流程與工具</a>
+	      </div>
     </div>
+
+	    <script>
+	      // 見證資料（之後要新增，只要把新分類/連結加在這裡）
+	      const TESTIMONIALS = [
+	        { cat: '節電分享', items: [
+	          { id: 'kPXvXQwq7kE', kind: 'video' },
+	        ]},
+	        { cat: '茶園分享', items: [
+	          { id: '0g2_Qd7jIYw', kind: 'video' },
+	        ]},
+	        { cat: '長照分享', items: [
+	          { id: 'V8f-RkpwXIg', kind: 'video' },
+	        ]},
+	        { cat: '美業分享', items: [
+	          { id: 'SP32ToByGUg', kind: 'shorts' },
+	        ]},
+	        { cat: '農地不動產分享', items: [
+	          { id: 'JJsfmRLKpGg', kind: 'shorts' },
+	        ]},
+	        { cat: '牙膏分享', items: [
+	          { id: 'x3q6tqZPQxM', kind: 'shorts' },
+	        ]},
+	        { cat: '企業內訓', items: [
+	          { id: 'W1Y3DwOi7pE', kind: 'shorts' },
+	          { id: 'dsGy4j4Slxo', kind: 'shorts' },
+	        ]},
+	        { cat: '電台', items: [
+	          { id: 'fZE0YxxSbmU', kind: 'shorts' },
+	        ]},
+	        { cat: '眼睛保護', items: [
+	          { id: 'WL2N9Pv3osY', kind: 'shorts' },
+	        ]},
+	        { cat: '海帶團購主', items: [
+	          { id: 'XZwq2N1EAb0', kind: 'shorts' },
+	        ]},
+	        { cat: '招生分享', items: [
+	          { id: '-tMeifM-k6g', kind: 'video' },
+	          { id: 'rakjpnnnic4', kind: 'shorts' },
+	          { id: '4fkkSka4HwI', kind: 'shorts' },
+	          { id: 'K24BqL93Pok', kind: 'shorts' },
+	          { id: 'bcX2nSUNN1o', kind: 'shorts' },
+	          { id: 'fXFGof43Y2s', kind: 'shorts' },
+	          { id: 'JEp5FQge0OQ', kind: 'shorts' },
+	        ]},
+	        { cat: '政策分享', items: [
+	          { id: '_jbSDtXxchg', kind: 'video' },
+	          { id: 'wrYWGvGMyyU', kind: 'shorts' },
+	        ]},
+	      ];
+
+	      const $grid = document.getElementById('testimonialGrid');
+	      const $chips = document.getElementById('tChips');
+	      const $search = document.getElementById('tSearch');
+	      let activeCat = '全部';
+
+	      function makeEmbedSrc(id) {
+	        // YouTube shorts 也可以用 embed 播放
+	        return `https://www.youtube.com/embed/${id}`;
+	      }
+
+	      function renderChips() {
+	        const cats = ['全部', ...TESTIMONIALS.map(x => x.cat)];
+	        $chips.innerHTML = cats.map(cat => {
+	          const on = cat === activeCat ? 'chip on' : 'chip';
+	          return `<button class="${on}" type="button" data-cat="${cat}">${cat}</button>`;
+	        }).join('');
+	        $chips.querySelectorAll('button').forEach(btn => {
+	          btn.addEventListener('click', () => {
+	            activeCat = btn.dataset.cat;
+	            renderChips();
+	            renderGrid();
+	          });
+	        });
+	      }
+
+	      function matchSearch(cat) {
+	        const q = ($search.value || '').trim().toLowerCase();
+	        if (!q) return true;
+	        return cat.toLowerCase().includes(q);
+	      }
+
+	      function renderGrid() {
+	        const blocks = TESTIMONIALS
+	          .filter(b => (activeCat === '全部' || b.cat === activeCat))
+	          .filter(b => matchSearch(b.cat));
+
+	        if (blocks.length === 0) {
+	          $grid.innerHTML = `<div class="card" style="padding:14px;"><div class="muted">找不到符合的分類，換個關鍵字試試看。</div></div>`;
+	          return;
+	        }
+
+	        $grid.innerHTML = blocks.map(block => {
+	          const vids = block.items.map(v => {
+	            const src = makeEmbedSrc(v.id);
+	            return `
+	              <div class="tvideo">
+	                <iframe loading="lazy" src="${src}" title="${block.cat}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	              </div>
+	            `;
+	          }).join('');
+
+	          return `
+	            <div class="card tcard">
+	              <div class="tcard-head">
+	                <div>
+	                  <div class="kicker">分類</div>
+	                  <h3 class="tcard-title">${block.cat}</h3>
+	                </div>
+	                <a class="btn" href="contact.html" style="white-space:nowrap;">想做同款</a>
+	              </div>
+	              <div class="tvidgrid">${vids}</div>
+	            </div>
+	          `;
+	        }).join('');
+	      }
+
+	      renderChips();
+	      renderGrid();
+	      $search.addEventListener('input', renderGrid);
+	    </script>
 
 
     <div class="card" style="padding:16px; margin-top:12px;">
